@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+.video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.front_page_div {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 0, 0);
+  overflow: hidden;
+}
+
+.input {
+  border-radius: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  height: 6vh;
+  width: 40vw;
+}
+.mainInput {
+  position: relative;
+  margin-top: 25%;
+  margin-left: 25%;
+}
