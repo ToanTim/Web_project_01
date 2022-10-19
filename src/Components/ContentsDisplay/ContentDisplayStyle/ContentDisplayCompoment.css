@@ -34,6 +34,7 @@ img {
 }
 
 .text {
+  text-align: justify;
   margin-top: -2vh;
   margin-left: 10vw;
   display: block;
@@ -44,6 +45,10 @@ img {
   /* auto new line paragraph */
   hyphens: auto;
   word-wrap: break-word;
+}
+
+.text::-webkit-scrollbar {
+  display: none;
 }
 
 @media only screen and (max-width: 1185px) {
