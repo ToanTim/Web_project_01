@@ -7,9 +7,9 @@ const NavBarMenuList = (props) => {
       <ul>
         {props.NavBar_Menus.map((item) => (
           <li className="navBar_Link">
-            <Link to={item.href} smooth>
+            <a href={item.href} onClick={props.navBarMenusHandller}>
               {item.menuTitle}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

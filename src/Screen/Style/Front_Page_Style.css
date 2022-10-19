@@ -16,11 +16,11 @@
   margin: 0;
   width: 100vw;
   height: 400vh;
-  background-color: rgb(255, 0, 0);
+  background-color: red;
 }
 
 /* still can scroll but hidden scroll bar */
-body::-webkit-scrollbar-x {
+body::-webkit-scrollbar {
   display: none;
 }
 .input {
@@ -51,4 +51,8 @@ body::-webkit-scrollbar-x {
 .about_content1 {
   width: 100vw;
   height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -4,13 +4,13 @@
   }
 
   100% {
-    background: rgba(208, 209, 208, 0.6);
+    background: rgba(208, 209, 208, 0.7);
   }
 }
 
 @keyframes transperantAnimationFadeOut {
   0% {
-    background: rgba(208, 209, 208, 0.6);
+    background: rgba(208, 209, 208, 0.7);
   }
 
   100% {
@@ -21,18 +21,15 @@
 .navBarContainer {
   top: 0;
   position: fixed;
-  background: rgba(208, 209, 208, 0.6);
+  background: rgba(208, 209, 208, 0.7);
   height: 100vh;
   animation: transperantAnimationFadeIn 2s;
   width: 100vw;
 }
 
 .transparentNavBarContainer {
-  position: fixed;
   top: 0;
-  height: 100vh;
   animation: transperantAnimationFadeOut 2s;
-  width: 100vw;
 }
 
 .logo_container {
@@ -51,7 +48,7 @@
 
 .navBarSearchButton {
   position: absolute;
-  color: rgb(255, 176, 189);
+  color: rgb(254, 92, 119);
   background-color: transparent;
   right: 5vw;
   top: 1vh;
@@ -61,7 +58,7 @@
 
 .navBarMenuButton {
   position: absolute;
-  color: rgb(255, 176, 189);
+  color: rgb(254, 116, 139);
   background-color: transparent;
   right: 10vw;
   top: 1vh;
@@ -70,6 +67,7 @@
 }
 
 .navBar_Menu {
+  position: fix;
   align-content: center;
   text-align: center;
   background-color: transparent;

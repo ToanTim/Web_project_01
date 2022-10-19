@@ -7,30 +7,36 @@ const NavBar_Menus = [
   {
     id: 0,
     type: 1,
+    menuTitle: "HOME",
+    href: "#videoBG",
+  },
+  {
+    id: 1,
+
     menuTitle: "ABOUT",
     href: "#about",
   },
   {
-    id: 1,
-    type: 2,
+    id: 2,
+
     menuTitle: "FOOD BLOG",
     href: "/food-blog",
   },
   {
-    id: 2,
-    type: 2,
+    id: 3,
+
     menuTitle: "RESTAURANT?",
     href: "/restaurant",
   },
   {
-    id: 3,
-    type: 1,
+    id: 4,
+
     menuTitle: "CONTACT",
     href: "#contact",
   },
   {
-    id: 4,
-    type: 1,
+    id: 5,
+
     menuTitle: "NEWSLETTER",
     href: "#new-letter",
   },
@@ -70,7 +76,10 @@ const NavBar = (props) => {
         </button>
       </div>
       <div className={navBarMenus ? "navBar_Menu" : "removeNavBar_Menu"}>
-        <NavBarMenuList NavBar_Menus={NavBar_Menus} />
+        <NavBarMenuList
+          NavBar_Menus={NavBar_Menus}
+          navBarMenusHandller={navBarMenusHandller}
+        />
       </div>
     </div>
   );
