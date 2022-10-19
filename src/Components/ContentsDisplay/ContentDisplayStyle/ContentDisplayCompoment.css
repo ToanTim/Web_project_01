@@ -92,20 +92,21 @@ img {
 
   .contentText {
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
     margin-top: 0;
   }
 
   .text {
-    height: 83vh;
-    width: 90vw;
+    margin-top: 0;
+    height: 85vh;
+    width: 95vw;
     margin-left: 5vw;
     overflow: hidden;
   }
 
   .contentImage {
-    height: 20vh;
+    height: 15vh;
     width: 100vw;
-    background-color: white;
+    background-color: transparent;
   }
 }

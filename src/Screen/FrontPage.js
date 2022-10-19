@@ -32,7 +32,7 @@ export default class FrontPage extends Component {
         contentText1:
           "Vietnamese food is known for its distinct use of fresh, fragrant and aromatic flavours. There is a balance of sweet and sour, spicy and cooling, fresh and salty flavours (from the Vietnamese staple fermented fish sauce, or ‘nuoc mam’).  ",
         contentText2:
-          "Stir fries and noodle soups are common. Towards the south, food becomes sweeter, and mixes flavours from Cambodia and Thailand.The Mekong Delta in the south, aptly named the “the rice bowl” of Vietnam, is incredibly fertile, with a tropical climate, sustaining more rice paddies and coconut groves. In fact, Vietnam rice production is the second biggest rice exporter in the world (after Thailand). Rice is a central part of the Vietnamese diet, and steamed rice is part of almost every meal. It is also transformed into ingredients such as rice noodles, rice paper for spring rolls, rice vinegar, and rice wine.",
+          "Stir fries and noodle soups are common. Towards the south, food becomes sweeter, and mixes flavours from Cambodia and Thailand.The Mekong Delta in the south, aptly named the “the rice bowl” of Vietnam, is incredibly fertile, with a tropical climate, sustaining more rice paddies and coconut groves. In fact, Vietnam rice production is the second biggest rice exporter in the world. Rice is a central part of the Vietnamese diet, and steamed rice is part of almost every meal. It is also transformed into ingredients such as rice noodles, rice paper for spring rolls, rice vinegar, and rice wine.",
       },
       {
         id: 1,
