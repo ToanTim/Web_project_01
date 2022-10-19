@@ -40,6 +40,7 @@ img {
   background: rgba(226, 232, 226, 0.6);
   height: 60vh;
   width: 30vw;
+  overflow: scroll;
   /* auto new line paragraph */
   hyphens: auto;
   word-wrap: break-word;
