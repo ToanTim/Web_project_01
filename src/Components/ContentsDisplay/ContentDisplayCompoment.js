@@ -6,7 +6,13 @@ function ContentDisplayCompoment(props) {
     <div id={props.contentID} className="contentContainer" style={props.style}>
       <div className="contentText">
         <div className="text">
-          <p style={{ "font-weight": "bold", textAlign: "center" }}>
+          <p
+            style={{
+              "font-weight": "bold",
+              textAlign: "center",
+              textTransform: "uppercase",
+            }}
+          >
             {props.contentID}
           </p>
           <p>{props.content.contentText1}</p>

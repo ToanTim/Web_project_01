@@ -1,3 +1,6 @@
 Library use:
-react-icons
+react-icons //for icon for nav bar
 react-router-dom
+firebase    //for database
+firebase-tools //use firebase to host website
+dotenv      //for storing credential key from the database 
