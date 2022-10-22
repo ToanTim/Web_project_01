@@ -8,7 +8,7 @@ import NavBar from "../Components/NavBarFile/NavBar";
 import ContentDisplayCompoment from "../Components/ContentsDisplay/ContentDisplayCompoment";
 import phoImag from "../Assets/Pictures/pho.jpg";
 import nemImag from "../Assets/Pictures/nem.jpg";
-
+import SwiperComponent from "../Components/SwiperSlide/Slide.Component";
 import contentAbout from "../Assets/Pictures/contentAbout1.jpg";
 import contentContact from "../Assets/Pictures/contentContact.jpg";
 export default class FrontPage extends Component {
@@ -54,6 +54,7 @@ export default class FrontPage extends Component {
         <div id="videoBG" className="video">
           <VideoPlayer src={backGroundVideo} autoPlay={true} muted={true} />
         </div>
+
         <NavBar
           setSearchDisplay={this.searchDisplayUpdate}
           searchDisplayValue={this.state.searchDisplay}
@@ -77,9 +78,7 @@ export default class FrontPage extends Component {
             backgroundImage: `url(${contentAbout})`,
           }}
         />
-        <div className="about_content1">
-          <h1>hello3</h1>
-        </div>
+        <SwiperComponent />
         <ContentDisplayCompoment
           contentID="contact"
           content={content[1]}
