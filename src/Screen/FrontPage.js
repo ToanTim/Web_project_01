@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import backGroundVideo from "../Assets/Videos/backgroundVideo.mp4";
 import "./Style/Front_Page_Style.css";
 import VideoPlayer from "react-background-video-player";
-import logo from "../Assets/Pictures/Logo.png";
-import { Link } from "react-router-dom";
 import NavBar from "../Components/NavBarFile/NavBar";
 import ContentDisplayCompoment from "../Components/ContentsDisplay/ContentDisplayCompoment";
 import phoImag from "../Assets/Pictures/pho.jpg";
 import nemImag from "../Assets/Pictures/nem.jpg";
-import SwiperComponent from "../Components/SwiperSlide/Slide.Component";
+import SwiperComponent from "../Components/SwiperSlide/SwiperComponent.js";
 import contentAbout from "../Assets/Pictures/contentAbout1.jpg";
 import contentContact from "../Assets/Pictures/contentContact.jpg";
+
 export default class FrontPage extends Component {
   constructor(props) {
     super(props);
