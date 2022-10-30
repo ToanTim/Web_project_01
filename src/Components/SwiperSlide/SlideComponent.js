@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./StyleSwiperSlide/Slide.css";
 import { BsCalendar2Fill, BsFillPersonFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import FirebaseDB from "../../Backend/FirebaseDB";
 import {
   doc,
@@ -12,6 +13,8 @@ import {
 } from "firebase/firestore";
 
 const SlideComponent = (props) => {
+  const blogReadLink = "/food-blog/" + props.id;
+
   return (
     <div className="slideContainer">
       <div className="imageContainer">
@@ -34,7 +37,9 @@ const SlideComponent = (props) => {
             <p className="intro_swiper_slide">{props.intro}</p>
           </div>
           <div className="button_swiper_slide_div">
-            <button className="button_swiper_slide">Read More</button>
+            <Link to={blogReadLink}>
+              <button className="button_swiper_slide">Read More</button>
+            </Link>
           </div>
         </div>
       </div>

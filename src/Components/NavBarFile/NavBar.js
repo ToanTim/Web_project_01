@@ -3,51 +3,15 @@ import logo from "../../Assets/Pictures/Logo.png";
 import "./Style_NavBar/navBar.css";
 import { BsSearch, BsJustify, BsXLg } from "react-icons/bs";
 import NavBarMenuList from "./NavBarMenuList";
-const NavBar_Menus = [
-  {
-    id: 0,
-    type: 1,
-    menuTitle: "HOME",
-    href: "#videoBG",
-  },
-  {
-    id: 1,
 
-    menuTitle: "ABOUT",
-    href: "#about",
-  },
-  {
-    id: 2,
-
-    menuTitle: "FOOD BLOG",
-    href: "/food-blog",
-  },
-  {
-    id: 3,
-
-    menuTitle: "RESTAURANT?",
-    href: "/restaurant",
-  },
-  {
-    id: 4,
-
-    menuTitle: "CONTACT",
-    href: "#contact",
-  },
-  {
-    id: 5,
-
-    menuTitle: "NEWSLETTER",
-    href: "#new-letter",
-  },
-];
 
 const NavBar = (props) => {
   const [navBarMenus, setnavBarMenus] = useState(false);
+  const [searchDisplay, setSearchDisplay] = useState(false);
 
   const navBarMenusHandller = () => {
     setnavBarMenus(!navBarMenus);
-    props.setSearchDisplay({ searchDisplay: false });
+    setSearchDisplay(false);
   };
   return (
     <div
@@ -58,9 +22,7 @@ const NavBar = (props) => {
         <button
           className="navBarSearchButton"
           onClick={() => {
-            props.setSearchDisplay({
-              searchDisplay: !props.searchDisplayValue,
-            });
+            setSearchDisplay(!searchDisplay);
             setnavBarMenus(false);
           }}
         >
@@ -77,8 +39,16 @@ const NavBar = (props) => {
       </div>
       <div className={navBarMenus ? "navBar_Menu" : "removeNavBar_Menu"}>
         <NavBarMenuList
-          NavBar_Menus={NavBar_Menus}
+          NavBar_Menus={props.NavBar_Menus}
           navBarMenusHandller={navBarMenusHandller}
+        />
+      </div>
+      <div className={searchDisplay ? "mainInput" : "removeMainInput"}>
+        <input
+          className="input"
+          type="text"
+          name="name"
+          placeholder="What to eat today?"
         />
       </div>
     </div>

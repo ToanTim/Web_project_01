@@ -25,6 +25,45 @@ export default class FrontPage extends Component {
   }
 
   render() {
+    const NavBar_Menus = [
+      {
+        id: 0,
+        type: 1,
+        menuTitle: "HOME",
+        href: "#videoBG",
+      },
+      {
+        id: 1,
+
+        menuTitle: "ABOUT",
+        href: "#about",
+      },
+      {
+        id: 2,
+
+        menuTitle: "FOOD BLOG",
+        href: "/food-blog",
+      },
+      {
+        id: 3,
+
+        menuTitle: "RESTAURANT?",
+        href: "/restaurant",
+      },
+      {
+        id: 4,
+
+        menuTitle: "CONTACT",
+        href: "#contact",
+      },
+      {
+        id: 5,
+
+        menuTitle: "NEWSLETTER",
+        href: "#new-letter",
+      },
+    ];
+
     const content = [
       {
         id: 0,
@@ -54,20 +93,8 @@ export default class FrontPage extends Component {
           <VideoPlayer src={backGroundVideo} autoPlay={true} muted={true} />
         </div>
 
-        <NavBar
-          setSearchDisplay={this.searchDisplayUpdate}
-          searchDisplayValue={this.state.searchDisplay}
-        />
-        <div
-          className={this.state.searchDisplay ? "mainInput" : "removeMainInput"}
-        >
-          <input
-            className="input"
-            type="text"
-            name="name"
-            placeholder="What to eat today?"
-          />
-        </div>
+        <NavBar NavBar_Menus={NavBar_Menus} />
+
         <ContentDisplayCompoment
           contentID="about"
           content={content[0]}
