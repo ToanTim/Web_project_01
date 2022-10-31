@@ -92,6 +92,7 @@ const SwiperComponent = () => {
                 title={item.name}
                 author={item.author}
                 postDate={item.post_date}
+                postUpdate={item.post_update}
                 intro={item.intro}
                 id={item.id}
               ></SlideComponent>

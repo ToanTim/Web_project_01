@@ -1,0 +1,62 @@
+.divblog_content_display_container {
+  min-height: 100px;
+  overflow: hidden;
+  background-color: red;
+  width: 100vw;
+}
+
+.divblog_content_display_ {
+  min-height: 100px;
+  overflow: hidden;
+  background-color: brown;
+  width: 60vw;
+  margin-left: 10vw;
+}
+
+.divblog_content_display {
+  min-height: 100px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+.divblog_content_display_navLink {
+  height: 4vh;
+  width: 100%;
+  background-color: yellow;
+}
+
+.divblog_content_display_author_name {
+  width: 100%;
+
+  background-color: green;
+  min-height: 100px;
+  overflow: hidden;
+}
+
+#h1Post_name_content_display {
+  font-size: 4vh;
+}
+
+#p1Post_author_content_display {
+  text-transform: uppercase;
+}
+
+.imagPost_author_avartar {
+  white-space: nowrap;
+  float: left;
+  align-items: center;
+  height: 100%;
+  width: 32px;
+}
+
+/* If the browser window is 600px or smaller, the background color will be lightblue: */
+@media only screen and (max-width: 600px) {
+  .divblog_content_display_ {
+    min-height: 100px;
+    overflow: hidden;
+    background-color: brown;
+    width: 100vw;
+    margin-left: 0;
+  }
+}

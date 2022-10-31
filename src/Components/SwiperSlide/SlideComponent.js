@@ -37,7 +37,7 @@ const SlideComponent = (props) => {
             <p className="intro_swiper_slide">{props.intro}</p>
           </div>
           <div className="button_swiper_slide_div">
-            <Link to={blogReadLink}>
+            <Link to={blogReadLink} state={props.post_data}>
               <button className="button_swiper_slide">Read More</button>
             </Link>
           </div>
