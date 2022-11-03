@@ -1,6 +1,13 @@
 Library use:
 react-icons //for icon for nav bar
-react-router-dom
+react-router-dom //
+Link router hashstag navigation
+dotenv      //for storing credential key from the database 
+bootstrap //UI template
+react-bootstrap //UI template
+swiper // UI 
+
+
+
 firebase    //for database
 firebase-tools //use firebase to host website
-dotenv      //for storing credential key from the database 

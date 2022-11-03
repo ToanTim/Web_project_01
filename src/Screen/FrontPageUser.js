@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import backGroundVideo from "../Assets/Videos/backgroundVideo.mp4";
-import "./Style/Front_Page_Style.css";
+import "./Style/Front_Page_User.css";
 import VideoPlayer from "react-background-video-player";
 import NavBar from "../Components/NavBarFile/NavBar";
 import ContentDisplayCompoment from "../Components/ContentsDisplay/ContentDisplayCompoment";
@@ -9,12 +9,11 @@ import nemImag from "../Assets/Pictures/nem.jpg";
 import SwiperComponent from "../Components/SwiperSlide/SwiperComponent.js";
 import contentAbout from "../Assets/Pictures/contentAbout1.jpg";
 import contentContact from "../Assets/Pictures/contentContact.jpg";
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { logout } from "../Backend/FirebaseDB";
+import { Navigation } from "swiper";
 
-export default class FrontPage extends Component {
-  /* const { id } = useParams();
-  const location = useLocation();
-  const post_data = location.state;*/
+export default class FrontPageUser extends Component {
   constructor(props) {
     super(props);
     // Don't call this.setState() here!
@@ -31,7 +30,12 @@ export default class FrontPage extends Component {
   }
 
   render() {
-    const NavBar_Menus_logout = [
+    //if userId is not null then user is signed in
+    const userId = localStorage.getItem("userId_toantim");
+    const userEmail = localStorage.getItem("userEmail_toantim");
+    const userWriteBlogLink = "/user/" + userId + "/write_post";
+    console.log(userEmail);
+    const NavBar_Menus_User = [
       {
         id: 0,
         type: 1,
@@ -68,44 +72,11 @@ export default class FrontPage extends Component {
         menuTitle: "NEWSLETTER",
         href: "#new-letter",
       },
-    ];
-
-    const NavBar_Menus_login = [
       {
-        id: 0,
-        type: 1,
-        menuTitle: "HOME",
-        href: "#videoBG",
-      },
-      {
-        id: 1,
+        id: 6,
 
-        menuTitle: "ABOUT",
-        href: "#about",
-      },
-      {
-        id: 2,
-
-        menuTitle: "FOOD BLOG",
-        href: "/food-blog",
-      },
-      {
-        id: 3,
-
-        menuTitle: "RESTAURANT?",
-        href: "/restaurant",
-      },
-      {
-        id: 4,
-
-        menuTitle: "CONTACT",
-        href: "#contact",
-      },
-      {
-        id: 5,
-
-        menuTitle: "NEWSLETTER",
-        href: "#new-letter",
+        menuTitle: "WRITE BLOG",
+        href: userWriteBlogLink,
       },
     ];
 
@@ -133,14 +104,20 @@ export default class FrontPage extends Component {
       },
     ];
 
-    //console.log("this is frontpage for user id" + this.state.idid);
     return (
       <div className="front_page_div">
         <div id="videoBG" className="video">
           <VideoPlayer src={backGroundVideo} autoPlay={true} muted={true} />
         </div>
 
-        <NavBar NavBar_Menus={NavBar_Menus_logout} />
+        <NavBar
+          NavBar_Menus={NavBar_Menus_User}
+          userEmail={"You are logging in as " + userEmail}
+          authenStatus={true}
+          functionOnclick={() => {
+            logout();
+          }}
+        />
 
         <ContentDisplayCompoment
           contentID="about"

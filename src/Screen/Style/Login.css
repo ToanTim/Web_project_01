@@ -1,0 +1,13 @@
+.LoginNavContainer {
+  position: fixed;
+  background-color: transparent;
+
+  width: 100%;
+}
+
+.LoginContainer {
+  margin-top: -6vh;
+  background-color: transparent;
+  height: 100vh;
+  width: 100vw;
+}

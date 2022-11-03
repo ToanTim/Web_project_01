@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import SlideComponent from "./SlideComponent";
-// import Swiper core and required modules
 
+// import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 import "swiper/modules/navigation/navigation.min.css";
-
 import "./StyleSwiperSlide/Swiper.css";
 
-import SwiperImage1 from "../../Assets/Pictures/nem.jpg";
+import database from "../../Backend/FirebaseDB.js";
+import { getData } from "../../Backend/DataHandler.js";
+import { getDatabase } from "firebase/database";
+import { ref, set, get, update, remove, child } from "firebase/database";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -19,30 +22,10 @@ const SwiperComponent = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState([]);
+  const database = getDatabase();
 
   useEffect(() => {
-    const url =
-      "https://web-project-01-database-default-rtdb.europe-west1.firebasedatabase.app/data.json";
-
-    const FetchAPI = async () => {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error("Something went wrong");
-        }
-        let dataIsReady = await response.json();
-        setData(dataIsReady);
-
-        setError(null);
-        /* dataIsReady.map((item) => console.log(item)); */
-        console.log(data);
-      } catch (error) {
-        setError(error);
-        console.log("fetching error: " + error);
-      }
-    };
-
-    FetchAPI();
+    getData(setData, "data");
   }, []);
 
   /*   title={data.name}

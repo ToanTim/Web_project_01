@@ -53,7 +53,7 @@
   position: absolute;
   color: rgb(254, 92, 119);
   background-color: transparent;
-  right: 5vw;
+  right: 10vw;
   top: 1vh;
   margin-top: 1%;
   border: none;
@@ -63,14 +63,24 @@
   position: absolute;
   color: rgb(254, 116, 139);
   background-color: transparent;
-  right: 10vw;
+  right: 15vw;
+  top: 1vh;
+  margin-top: 1%;
+  border: none;
+}
+
+.navBarAccountButton {
+  position: absolute;
+  color: rgb(254, 116, 139);
+  background-color: transparent;
+  right: 5vw;
   top: 1vh;
   margin-top: 1%;
   border: none;
 }
 
 .navBar_Menu {
-  position: fix;
+  position: fixed;
   align-content: center;
   text-align: center;
   background-color: transparent;
@@ -95,6 +105,23 @@
   display: none;
 }
 
+.dropDownDisplay {
+  position: fixed;
+  align-content: center;
+  text-align: center;
+  background-color: transparent;
+  height: 90vh;
+  width: 90vw;
+  margin-top: 10vh;
+  margin-left: 5vw;
+}
+.removeDropDownDisplay {
+  display: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
 @media only screen and (max-width: 500px) {
   .logo {
     display: none;

@@ -2,15 +2,6 @@ import React, { useEffect } from "react";
 import "./StyleSwiperSlide/Slide.css";
 import { BsCalendar2Fill, BsFillPersonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import FirebaseDB from "../../Backend/FirebaseDB";
-import {
-  doc,
-  getDocFromCache,
-  onSnapshot,
-  collection,
-  query,
-  where,
-} from "firebase/firestore";
 
 const SlideComponent = (props) => {
   const blogReadLink = "/food-blog/" + props.id;

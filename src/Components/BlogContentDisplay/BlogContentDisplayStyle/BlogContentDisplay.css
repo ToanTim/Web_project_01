@@ -1,14 +1,14 @@
 .divblog_content_display_container {
   min-height: 100px;
   overflow: hidden;
-  background-color: red;
+  background-color: white;
   width: 100vw;
 }
 
 .divblog_content_display_ {
   min-height: 100px;
   overflow: hidden;
-  background-color: brown;
+  background-color: white;
   width: 60vw;
   margin-left: 10vw;
 }
@@ -23,13 +23,13 @@
 .divblog_content_display_navLink {
   height: 4vh;
   width: 100%;
-  background-color: yellow;
+  background-color: white;
 }
 
 .divblog_content_display_author_name {
   width: 100%;
 
-  background-color: green;
+  background-color: white;
   min-height: 100px;
   overflow: hidden;
 }
@@ -55,7 +55,7 @@
   .divblog_content_display_ {
     min-height: 100px;
     overflow: hidden;
-    background-color: brown;
+    background-color: white;
     width: 100vw;
     margin-left: 0;
   }
